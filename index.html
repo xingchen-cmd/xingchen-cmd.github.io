@@ -225,7 +225,7 @@
 <p>局内模型</p>
 </blockquote>
 <p><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1006466593,3344315942&fm=26&gp=0.jpg"></p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1479526505&auto=0&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1479526505&auto=0&height=66"></iframe>
 
 
 
@@ -301,17 +301,17 @@
 <ul>
 <li>仓库名字随便取一个，没有硬性要求，描述可有可无</li>
 </ul>
-<p><img src="hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA/bz1.png" alt="步骤一"></p>
+<p><img src="/2020/10/05/hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA/bz1.png" alt="步骤一"></p>
 <ul>
 <li>打开仓库，点击issue，在里面create an issue(不创建可能导致出现NotFound的错误)</li>
 </ul>
-<p><img src="hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA/bz2.png" alt="步骤二"></p>
+<p><img src="/2020/10/05/hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA/bz2.png" alt="步骤二"></p>
 <hr>
 <ol start="2">
 <li>注册一个OAuth 应用</li>
 </ol>
 <hr>
-<p><img src="hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA/bz3.png" alt="步骤三"><br><img src="hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA/bz4.png" alt="步骤四"><br><img src="hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA/bz5.png" alt="步骤五"></p>
+<p><img src="/2020/10/05/hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA/bz3.png" alt="步骤三"><br><img src="/2020/10/05/hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA/bz4.png" alt="步骤四"><br><img src="/2020/10/05/hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA/bz5.png" alt="步骤五"></p>
 <hr>
 <ol start="3">
 <li>在blog\themes\yilia\layout_partial\post里面创建gitalk.ejs<br>如果有的话就直接替换</li>
@@ -325,7 +325,7 @@
 <hr>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if(theme.gitalk.enable &amp;&amp; theme.gitalk.distractionFreeMode)&#123; %&gt;</span><br><span class="line">    &lt;%- partial(&#39;post&#x2F;gitalk&#39;, &#123;</span><br><span class="line">    key: post.slug,</span><br><span class="line">    title: post.title,</span><br><span class="line">    url: config.url+url_for(post.path)</span><br><span class="line">  &#125;) %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>加完后效果<br><img src="hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA/bz6.png"><br>)</p>
+<p>加完后效果<br><img src="/2020/10/05/hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA/bz6.png"><br>)</p>
 </blockquote>
 <hr>
 <ol start="5">
@@ -334,15 +334,15 @@
 <hr>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># Gitalk</span><br><span class="line">gitalk: </span><br><span class="line">  enable: true    </span><br><span class="line">  clientID: &#39;&#39;    #Github上生成的</span><br><span class="line">  clientSecret: &#39;&#39;   #同上</span><br><span class="line">  repo:    #步骤一创建的那个仓库的名字</span><br><span class="line">  owner:   #github用户名</span><br><span class="line">  admin:   #同上</span><br><span class="line">  distractionFreeMode: true</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>步骤2之后就可以查看ID与Secret<br><img src="hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA/bz7.png"></p>
+<p>步骤2之后就可以查看ID与Secret<br><img src="/2020/10/05/hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA/bz7.png"></p>
 </blockquote>
 <blockquote>
-<p>完成后的样子<br><img src="hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA/bz8.png"></p>
+<p>完成后的样子<br><img src="/2020/10/05/hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA/bz8.png"></p>
 </blockquote>
 <blockquote>
 <p>如果有什么错误或者疑问，欢迎在评论区留言</p>
 </blockquote>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1421256202&auto=0&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1421256202&auto=0&height=66"></iframe>
       
 
       
@@ -497,7 +497,7 @@
 <h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><ol>
 <li>第一点</li>
 <li>第二点</li>
-<li>第三点
+<li>第三点</li></ol>
         
           <a class="article-more-a" href="/2020/10/03/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/#more">more >></a>
         
