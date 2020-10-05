@@ -38,6 +38,11 @@
 
 <meta name="generator" content="Hexo 5.2.0"></head>
 
+
+  <link rel="stylesheet" href="/lib/gitalk/gitalk.css">
+  <script src="/lib/gitalk/gitalk.min.js"></script>
+
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -367,6 +372,26 @@
   
 
 
+
+
+  <div class="gitalk">
+    <div id="gitalk-container"></div>
+    <script type="text/javascript">
+        const gitalk = new Gitalk({
+            clientID: 'OAuth application注册成功获得',
+            clientSecret: 'OAuth application注册成功获得',
+            repo: '存储博客评论的仓库地址，可以是存储博客的仓库',
+            owner: 'github账户名',
+            admin: ['github账户名'],
+            id: md5(location.pathname),      // Ensure uniqueness and length less than 50
+            distractionFreeMode: false  // Facebook-like distraction free mode
+        })
+ 
+        gitalk.render('gitalk-container')
+    </script>
+</div>
+  
+
           </div>
         </div>
       </div>
@@ -382,6 +407,9 @@
     </div>
   </div>
 </footer>
+
+<script type="text/javascript" src="/love.js"></script>
+
     </div>
     <script>
 	var yiliaConfig = {
