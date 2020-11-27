@@ -8,20 +8,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://xingchen-cmd.github.io">
-  <title>OOP思想 | polly&#39;s blog</title>
+  <title>java实战-俄罗斯方块上 | polly&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么是oop思想？oop的英文全称是Object Oriented Programmin，中文意思是面向对象程序设计 oop思想的来历oop思想是上世界90年代才流行的一种软件编程方法。他强调了对象的“抽象”，“封装”，“继承”与“多态”，在oop思想流行之前的主流思想为SP思想（结构化程序设计也称为面向结构的程序设计方法） oop思想的特点oop思想的三大特点及封装，继承，多态 封装 什么是封装">
+  <meta name="description" content="利用GUI制作一个简易的俄罗斯方块 简易分析，需要方块一共有7中分别为（I,O,S,Z,L,J,T）,可以控制左右移动与下落，同时还可以变换形态，在一个网格里面降落，到了底部或者下面有方块就会停住并且产生一个新的方块，并且右边会预先提示下一个方块，如果有一行方块满了就会消除，并且加分，在右边显示分数，如果有一列方块满了就意味着游戏结束。    写一个方块类包含一些方块的基本属性和方法，让I，O，S">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OOP思想">
-<meta property="og:url" content="http://xingchen-cmd.github.io/2020/10/04/OOP%E6%80%9D%E6%83%B3/index.html">
+<meta property="og:title" content="java实战-俄罗斯方块上">
+<meta property="og:url" content="http://xingchen-cmd.github.io/2020/10/10/java%E5%AE%9E%E6%88%98-%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%E4%B8%8A/index.html">
 <meta property="og:site_name" content="polly&#39;s blog">
-<meta property="og:description" content="什么是oop思想？oop的英文全称是Object Oriented Programmin，中文意思是面向对象程序设计 oop思想的来历oop思想是上世界90年代才流行的一种软件编程方法。他强调了对象的“抽象”，“封装”，“继承”与“多态”，在oop思想流行之前的主流思想为SP思想（结构化程序设计也称为面向结构的程序设计方法） oop思想的特点oop思想的三大特点及封装，继承，多态 封装 什么是封装">
+<meta property="og:description" content="利用GUI制作一个简易的俄罗斯方块 简易分析，需要方块一共有7中分别为（I,O,S,Z,L,J,T）,可以控制左右移动与下落，同时还可以变换形态，在一个网格里面降落，到了底部或者下面有方块就会停住并且产生一个新的方块，并且右边会预先提示下一个方块，如果有一行方块满了就会消除，并且加分，在右边显示分数，如果有一列方块满了就意味着游戏结束。    写一个方块类包含一些方块的基本属性和方法，让I，O，S">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-10-04T15:26:05.000Z">
-<meta property="article:modified_time" content="2020-10-06T13:56:55.100Z">
+<meta property="og:image" content="http://xingchen-cmd.github.io/2020/10/10/java%E5%AE%9E%E6%88%98-%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%E4%B8%8A/bz.png">
+<meta property="article:published_time" content="2020-10-10T01:25:31.000Z">
+<meta property="article:modified_time" content="2020-10-12T02:25:49.277Z">
 <meta property="article:author" content="polly">
 <meta property="article:tag" content="JAVA">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://xingchen-cmd.github.io/2020/10/10/java%E5%AE%9E%E6%88%98-%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%E4%B8%8A/bz.png">
   
   
     <link rel="icon" href="/images/tubiao.jpg">
@@ -178,14 +180,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-OOP思想" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-java实战-俄罗斯方块上" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      OOP思想
+      java实战-俄罗斯方块上
     </h1>
   
 
@@ -201,51 +203,43 @@
 
 <!--显示阅读次数完毕-->
         
-        <a href="/2020/10/04/OOP%E6%80%9D%E6%83%B3/" class="archive-article-date">
-  	<time datetime="2020-10-04T15:26:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-04</time>
+        <a href="/2020/10/10/java%E5%AE%9E%E6%88%98-%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%E4%B8%8A/" class="archive-article-date">
+  	<time datetime="2020-10-10T01:25:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="什么是oop思想？"><a href="#什么是oop思想？" class="headerlink" title="什么是oop思想？"></a>什么是oop思想？</h1><p>oop的英文全称是Object Oriented Programmin，中文意思是面向对象程序设计</p>
-<h2 id="oop思想的来历"><a href="#oop思想的来历" class="headerlink" title="oop思想的来历"></a>oop思想的来历</h2><p>oop思想是上世界90年代才流行的一种软件编程方法。他强调了对象的“抽象”，“封装”，“继承”与“多态”，在oop思想流行之前的主流思想为SP思想（结构化程序设计也称为面向结构的程序设计方法）</p>
-<h2 id="oop思想的特点"><a href="#oop思想的特点" class="headerlink" title="oop思想的特点"></a>oop思想的特点</h2><p>oop思想的三大特点及封装，继承，多态</p>
-<h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><ol>
-<li>什么是封装？</li>
-<li>封装有什么用？</li>
-</ol>
-<hr>
-<p>在oop思想出现之前市面上的程序设计思想就是以算法和数据结构为主的kp思想，他们把大量的数据放在一个函数内，这样这些数据非常的不安全，而且在编写的时候容易出现错误，这个时候封装的思想就来了，【封装就是将数据以及与这些数据相关的一切操作语音组装到一起，并封装在一个“模块”之中，这个模块后面也称之为类】</p>
-<a id="more"></a>
-<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><ol>
-<li>什么是继承？</li>
-<li>继承有什么用？</li>
-</ol>
-<hr>
-<p>因为在oop思想以前程序设计之前的kp思想是以算法和数据结构两大模块构成，导致很多数据都在一个函数之内，如果多个函数内都有着相同的数据，那每个函数里面都要申明一下这些数据，就很容易导致数据冗余过高，而继承的思想可以大大的减少代码的冗余程度。【继承是指两个或者两个以上类之间的联系与区别，延续了前者的某些数据以及其使用的方法（也叫做属性与方法）】</p>
-<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><ol>
-<li>什么是多态？</li>
-<li>多态有什么用？<br>多态是同一行为具有多种不同表现形式或者形态的能力（通俗来说就是同一操作作用于不同对象产生的结果也不同），可以认为是函数重载的一种扩充，在oop思想之前的kp思想都是以函数的形式出现，为了同一函数体现不同的输出（表现），就出现了函数重载，现在函数重载也属于多态的一种，多态的主要有两个好处1. 应用程序不必为每一个派生类编写功能调用，只需要对抽象基类进行处理即可。大大提高程序的可复用性。（继承） 派生类的功能可以被基类的方法或引用变量所调用，这叫向后兼容，可以提高可扩充性和可维护性。（多态的真正作用）。</li>
-</ol>
-<h2 id="浅谈oop思想的优点和缺点"><a href="#浅谈oop思想的优点和缺点" class="headerlink" title="浅谈oop思想的优点和缺点"></a>浅谈oop思想的优点和缺点</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
-<li>通过继承可以大幅减低代码冗余，并且方便扩展，提高了编码效率，也降低了出错率</li>
-<li>多模块的划分有利于后期升级与维护</li>
-<li>以对象为中心的设计可以帮助开发人员从静态（属性）和动态（方法）两个方面把握问题，从而更好地实现系统；</li>
-</ul>
-<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ul>
-<li>运行效率低（因为运行时需要调用很多类，所以运行相对慢，随着硬件的价格的廉价，越来越多的程序员不在注重这点）</li>
-</ul>
-<hr>
-<blockquote>
-<p>结语<br>Java是一门纯面向对象的语言,面向对象在当下已经是主流思想，新出的语言基本都是面向对象的语言，所以我个人推荐学习Java更有利于掌握面向对象的思想。适合做大项目。<br>c语言是我们大学学习的第一门语言，它是一个面向过程的语言，所以它的运行速度极快（仅次于汇编语言），适合用于算法与数据结构。</p>
+        <h1 id="利用GUI制作一个简易的俄罗斯方块"><a href="#利用GUI制作一个简易的俄罗斯方块" class="headerlink" title="利用GUI制作一个简易的俄罗斯方块"></a>利用GUI制作一个简易的俄罗斯方块</h1><blockquote>
+<p>简易分析，需要方块一共有7中分别为（I,O,S,Z,L,J,T）,可以控制左右移动与下落，同时还可以变换形态，在一个网格里面降落，到了底部或者下面有方块就会停住并且产生一个新的方块，并且右边会预先提示下一个方块，如果有一行方块满了就会消除，并且加分，在右边显示分数，如果有一列方块满了就意味着游戏结束。</p>
 </blockquote>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1401095935&auto=0&height=66"></iframe>
+<hr>
+<ol>
+<li>写一个方块类包含一些方块的基本属性和方法，让I，O，S，Z，L，J，T方块继承这个方块类，用4*4的数组来保存这些方块。</li>
+</ol>
+<hr>
+<p>以下是一个方块类基本具备的属性和方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><span class="line">public class FK &#123;</span><br><span class="line">	private int x;&#x2F;&#x2F;x坐标</span><br><span class="line">	private int y;&#x2F;&#x2F;y坐标</span><br><span class="line">	private int color;&#x2F;&#x2F;颜色</span><br><span class="line">	private int[][] arr1;</span><br><span class="line">	private int[][] arr2;</span><br><span class="line">	private int[][] arr3;</span><br><span class="line">	private int[][] arr4;</span><br><span class="line">	&#x2F;&#x2F;保存当前方块的形态</span><br><span class="line">	private int index;&#x2F;&#x2F;当前方块的形态从0开始</span><br><span class="line">	private int maxindex;&#x2F;&#x2F;方块有多少种形态</span><br><span class="line">	public int getX() &#123;</span><br><span class="line">		return x;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setX(int x) &#123;</span><br><span class="line">		this.x &#x3D; x;</span><br><span class="line">	&#125;</span><br><span class="line">	public int getY() &#123;</span><br><span class="line">		return y;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setY(int y) &#123;</span><br><span class="line">		this.y &#x3D; y;</span><br><span class="line">	&#125;</span><br><span class="line">	public int getColor() &#123;</span><br><span class="line">		return color;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setColor(int color) &#123;</span><br><span class="line">		this.color &#x3D; color;</span><br><span class="line">	&#125;</span><br><span class="line">	public int[][] getArr1() &#123;</span><br><span class="line">		return arr1;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setArr1(int[][] arr1) &#123;</span><br><span class="line">		this.arr1 &#x3D; arr1;</span><br><span class="line">	&#125;</span><br><span class="line">	public int[][] getArr2() &#123;</span><br><span class="line">		return arr2;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setArr2(int[][] arr2) &#123;</span><br><span class="line">		this.arr2 &#x3D; arr2;</span><br><span class="line">	&#125;</span><br><span class="line">	public int[][] getArr3() &#123;</span><br><span class="line">		return arr3;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setArr3(int[][] arr3) &#123;</span><br><span class="line">		this.arr3 &#x3D; arr3;</span><br><span class="line">	&#125;</span><br><span class="line">	public int[][] getArr4() &#123;</span><br><span class="line">		return arr4;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setArr4(int[][] arr4) &#123;</span><br><span class="line">		this.arr4 &#x3D; arr4;</span><br><span class="line">	&#125;</span><br><span class="line">	public int getIndex() &#123;</span><br><span class="line">		return index;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setIndex(int index) &#123;</span><br><span class="line">		this.index &#x3D; index;</span><br><span class="line">	&#125;</span><br><span class="line">	public int getMaxindex() &#123;</span><br><span class="line">		return maxindex;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setMaxindex(int maxindex) &#123;</span><br><span class="line">		this.maxindex &#x3D; maxindex;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public void moveup() &#123;</span><br><span class="line">		y--;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;方块上移</span><br><span class="line">	public void movedown() &#123;</span><br><span class="line">		y++;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;方块下移</span><br><span class="line">	public void moveleft() &#123;</span><br><span class="line">		x--;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;方块左移动</span><br><span class="line">	public void moveright() &#123;</span><br><span class="line">		x++;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;方块右移动</span><br><span class="line">	public void change() &#123;</span><br><span class="line">		index++;</span><br><span class="line">		if(index&gt;&#x3D;getMaxindex())</span><br><span class="line">			index&#x3D;0;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;方块变形</span><br><span class="line">	public void changeback() &#123;</span><br><span class="line">		index--;</span><br><span class="line">		if(index&lt;0)</span><br><span class="line">			index&#x3D;getMaxindex()-1;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;方块变形返回</span><br><span class="line">	public int[][] getcurrentarr()&#123;</span><br><span class="line">		if(getIndex()&#x3D;&#x3D;0)</span><br><span class="line">			return getArr1();</span><br><span class="line">		else if(getIndex()&#x3D;&#x3D;1)</span><br><span class="line">			return getArr2();</span><br><span class="line">		else if(getIndex()&#x3D;&#x3D;2)</span><br><span class="line">			return getArr3();</span><br><span class="line">		else</span><br><span class="line">			return getArr4();</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;返回目前方块</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p><img src="/2020/10/10/java%E5%AE%9E%E6%88%98-%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%E4%B8%8A/bz.png"></p>
+<p>根据上图用数组来保存方块的位置</p>
+<p>O型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class O extends FK&#123;</span><br><span class="line"></span><br><span class="line">	public O()&#123;</span><br><span class="line">		setX(4);</span><br><span class="line">		setY(0);</span><br><span class="line">		</span><br><span class="line">		int[][] arr1&#x3D;new int[4][4];</span><br><span class="line">		arr1[0][0]&#x3D;arr1[0][1]&#x3D;arr1[1][0]&#x3D;arr1[1][1]&#x3D;1;</span><br><span class="line">		setArr1(arr1);</span><br><span class="line">		</span><br><span class="line">		setIndex(0);</span><br><span class="line">		setMaxindex(1);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>T型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public class T extends FK&#123;</span><br><span class="line">	public T() &#123;</span><br><span class="line">		int[][] arr1&#x3D;new int[4][4];</span><br><span class="line">		arr1[0][1]&#x3D;arr1[1][1]&#x3D;arr1[1][2]&#x3D;arr1[2][1]&#x3D;1;</span><br><span class="line">		setArr1(arr1);</span><br><span class="line">		</span><br><span class="line">		int[][] arr2&#x3D;new int[4][4];</span><br><span class="line">		arr2[1][0]&#x3D;arr2[1][1]&#x3D;arr2[1][2]&#x3D;arr2[2][1]&#x3D;1;</span><br><span class="line">		setArr2(arr2);</span><br><span class="line">		</span><br><span class="line">		int[][] arr3&#x3D;new int[4][4];</span><br><span class="line">		arr3[0][1]&#x3D;arr3[1][0]&#x3D;arr3[1][1]&#x3D;arr3[2][1]&#x3D;1;</span><br><span class="line">		setArr3(arr3);</span><br><span class="line">		</span><br><span class="line">		int[][] arr4&#x3D;new int[4][4];</span><br><span class="line">		arr4[1][0]&#x3D;arr4[1][1]&#x3D;arr4[0][1]&#x3D;arr4[1][2]&#x3D;1;</span><br><span class="line">		setArr4(arr4);</span><br><span class="line">		</span><br><span class="line">		setIndex(0);</span><br><span class="line">		setMaxindex(4);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>S型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public class S extends FK&#123;</span><br><span class="line">	</span><br><span class="line">	public S() &#123;</span><br><span class="line">		setX(4);</span><br><span class="line">		setY(0);</span><br><span class="line">		</span><br><span class="line">		int[][] arr1&#x3D;new int[4][4];</span><br><span class="line">		arr1[0][0]&#x3D;arr1[1][0]&#x3D;arr1[1][1]&#x3D;arr1[2][1]&#x3D;1;</span><br><span class="line">		setArr1(arr1);</span><br><span class="line">		</span><br><span class="line">		int[][] arr2&#x3D;new int[4][4];</span><br><span class="line">		arr2[1][0]&#x3D;arr2[1][1]&#x3D;arr2[0][1]&#x3D;arr2[0][2]&#x3D;1;</span><br><span class="line">		setArr2(arr2);</span><br><span class="line">		</span><br><span class="line">		setIndex(0);</span><br><span class="line">		setMaxindex(2);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Z型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public class Z extends FK&#123;</span><br><span class="line">	public Z() &#123;</span><br><span class="line">		</span><br><span class="line">		setX(4);</span><br><span class="line">		setY(0);</span><br><span class="line">		</span><br><span class="line">		int[][] arr1&#x3D;new int[4][4];</span><br><span class="line">		arr1[0][1]&#x3D;arr1[1][0]&#x3D;arr1[1][1]&#x3D;arr1[2][0]&#x3D;1;</span><br><span class="line">		setArr1(arr1);</span><br><span class="line">		</span><br><span class="line">		int[][] arr2&#x3D;new int[4][4];</span><br><span class="line">		arr2[0][0]&#x3D;arr2[0][1]&#x3D;arr2[1][1]&#x3D;arr2[1][2]&#x3D;1;</span><br><span class="line">		setArr2(arr2);</span><br><span class="line">		</span><br><span class="line">		setIndex(0);</span><br><span class="line">		setMaxindex(2);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>J型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">public class J extends FK&#123;</span><br><span class="line">	</span><br><span class="line">	public J() &#123;</span><br><span class="line">		setX(4);</span><br><span class="line">		setY(0);</span><br><span class="line">		</span><br><span class="line">		int[][] arr1&#x3D;new int[4][4];</span><br><span class="line">		arr1[0][2]&#x3D;arr1[1][2]&#x3D;arr1[2][1]&#x3D;arr1[2][2]&#x3D;1;</span><br><span class="line">		setArr1(arr1);</span><br><span class="line">		</span><br><span class="line">		int[][] arr2&#x3D;new int[4][4];</span><br><span class="line">		arr2[1][0]&#x3D;arr2[2][0]&#x3D;arr2[2][1]&#x3D;arr2[2][2]&#x3D;1;</span><br><span class="line">		setArr2(arr2);</span><br><span class="line">		</span><br><span class="line">		int[][] arr3&#x3D;new int[4][4];</span><br><span class="line">		arr3[0][0]&#x3D;arr3[0][1]&#x3D;arr3[1][0]&#x3D;arr3[2][0]&#x3D;1;</span><br><span class="line">		setArr3(arr3);</span><br><span class="line">		</span><br><span class="line">		int[][] arr4&#x3D;new int[4][4];</span><br><span class="line">		arr4[0][0]&#x3D;arr4[0][1]&#x3D;arr4[0][2]&#x3D;arr4[1][2]&#x3D;1;</span><br><span class="line">		setArr4(arr4);</span><br><span class="line">		</span><br><span class="line">		setIndex(0);</span><br><span class="line">		setMaxindex(4);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>L型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public class L extends FK&#123;</span><br><span class="line">	public L() &#123;</span><br><span class="line">		int[][] arr1&#x3D;new int[4][4];</span><br><span class="line">		arr1[0][0]&#x3D;arr1[1][0]&#x3D;arr1[2][0]&#x3D;arr1[2][1]&#x3D;1;</span><br><span class="line">		setArr1(arr1);</span><br><span class="line">		</span><br><span class="line">		int[][] arr2&#x3D;new int[4][4];</span><br><span class="line">		arr2[0][0]&#x3D;arr2[0][1]&#x3D;arr2[0][2]&#x3D;arr2[1][0]&#x3D;1;</span><br><span class="line">		setArr2(arr2);</span><br><span class="line">		</span><br><span class="line">		int[][] arr3&#x3D;new int[4][4];</span><br><span class="line">		arr3[0][1]&#x3D;arr3[0][2]&#x3D;arr3[1][2]&#x3D;arr3[2][2]&#x3D;1;</span><br><span class="line">		setArr3(arr3);</span><br><span class="line">		</span><br><span class="line">		int[][] arr4&#x3D;new int[4][4];</span><br><span class="line">		arr4[1][2]&#x3D;arr4[2][0]&#x3D;arr4[2][1]&#x3D;arr4[2][2]&#x3D;1;</span><br><span class="line">		setArr4(arr4);</span><br><span class="line">		</span><br><span class="line">		setIndex(0);</span><br><span class="line">		setMaxindex(4);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>I型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">	public I() &#123;</span><br><span class="line">		setX(4);</span><br><span class="line">		setY(0);</span><br><span class="line">		</span><br><span class="line">		int[][] arr1&#x3D;new int[4][4];</span><br><span class="line">		arr1[0][0]&#x3D;arr1[0][1]&#x3D;arr1[0][2]&#x3D;arr1[0][3]&#x3D;1;</span><br><span class="line">		setArr1(arr1);</span><br><span class="line">		</span><br><span class="line">		int[][] arr2&#x3D;new int[4][4];</span><br><span class="line">		arr2[0][0]&#x3D;arr2[1][0]&#x3D;arr2[2][0]&#x3D;arr2[3][0]&#x3D;1;</span><br><span class="line">		setArr2(arr2);</span><br><span class="line">		</span><br><span class="line">		setIndex(0);</span><br><span class="line">		setMaxindex(2);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-
+<hr>
 
       
 
@@ -260,7 +254,7 @@
   
   <br>
   <strong>本文链接：</strong>
-  <a rel="license" href="http://xingchen-cmd.github.io/2020/10/04/OOP%E6%80%9D%E6%83%B3/">http://xingchen-cmd.github.io/2020/10/04/OOP%E6%80%9D%E6%83%B3/</a>
+  <a rel="license" href="http://xingchen-cmd.github.io/2020/10/10/java%E5%AE%9E%E6%88%98-%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%E4%B8%8A/">http://xingchen-cmd.github.io/2020/10/10/java%E5%AE%9E%E6%88%98-%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%E4%B8%8A/</a>
   <br>
   <strong>版权声明：</strong>
   本作品采用
@@ -305,11 +299,6 @@
       
     </div>
     <div class="article-info article-info-index">
-      
-        <div class="article-pop-out tagcloud">
-          <i class="icon-tuding"></i>
-          <a class="article-tag-list-link color3">置顶</a>
-        </div>
       
       
 	<div class="article-tag tagcloud">
@@ -373,7 +362,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://xingchen-cmd.github.io/thub.io/2020/10/04/OOP%E6%80%9D%E6%83%B3/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://xingchen-cmd.github.io/thub.io/2020/10/10/java%E5%AE%9E%E6%88%98-%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%E4%B8%8A/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -387,18 +376,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/10/05/hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/10/16/hexo%E6%B7%BB%E5%8A%A0valine%E8%AF%84%E8%AE%BA/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          hexo博客添加gitalk评论
+          hexo添加valine评论
         
       </div>
     </a>
   
   
-    <a href="/2020/10/03/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">hexo博客的基本使用</div>
+    <a href="/2020/10/06/java%E5%AE%9E%E6%88%98%E5%B0%8F%E9%A1%B9%E7%9B%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java实战小项目</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -425,7 +414,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFoop%E6%80%9D%E6%83%B3%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">什么是oop思想？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#oop%E6%80%9D%E6%83%B3%E7%9A%84%E6%9D%A5%E5%8E%86"><span class="toc-number">1.1.</span> <span class="toc-text">oop思想的来历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#oop%E6%80%9D%E6%83%B3%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-number">1.2.</span> <span class="toc-text">oop思想的特点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E8%A3%85"><span class="toc-number">1.2.1.</span> <span class="toc-text">封装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-number">1.2.2.</span> <span class="toc-text">继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E6%80%81"><span class="toc-number">1.2.3.</span> <span class="toc-text">多态</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%85%E8%B0%88oop%E6%80%9D%E6%83%B3%E7%9A%84%E4%BC%98%E7%82%B9%E5%92%8C%E7%BC%BA%E7%82%B9"><span class="toc-number">1.3.</span> <span class="toc-text">浅谈oop思想的优点和缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E7%82%B9"><span class="toc-number">1.3.1.</span> <span class="toc-text">优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%BA%E7%82%B9"><span class="toc-number">1.3.2.</span> <span class="toc-text">缺点</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%A9%E7%94%A8GUI%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97"><span class="toc-number">1.</span> <span class="toc-text">利用GUI制作一个简易的俄罗斯方块</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -504,10 +493,6 @@ gitalk.render('gitalk-container')
 
 
 
-    <i class="fa fa-thumb-tack"></i>
-    <font color=7D26CD>置顶</font>
-    <span class="post-meta-divider">|</span>
-  
           </div>
         </div>
       </div>
