@@ -8,15 +8,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://xingchen-cmd.github.io">
-  <title>Archives: 2020 | polly&#39;s blog</title>
+  <title>将halo部署到阿里云 | polly&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="polly&#39;s blog">
-<meta property="og:url" content="http://xingchen-cmd.github.io/archives/2020/page/2/index.html">
+  <meta name="description" content="使用的halo版本是1.4.8  centos版本8.1  1.在阿里云服务器上面选择好操作系统   推荐大家选择centos操作系统，该系统具有优良的稳定性，是许多开发者的不二之选，我选择的是centos8.1版本然后在系统的安全组设置好端口。 2.配置jdk环境   centos系统配置Java环境极其简单，只需要一串代码即可完成环境配置。 1sudo yum install java-11">
+<meta property="og:type" content="article">
+<meta property="og:title" content="将halo部署到阿里云">
+<meta property="og:url" content="http://xingchen-cmd.github.io/2021/06/19/%E5%B0%86halo%E9%83%A8%E7%BD%B2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91/index.html">
 <meta property="og:site_name" content="polly&#39;s blog">
+<meta property="og:description" content="使用的halo版本是1.4.8  centos版本8.1  1.在阿里云服务器上面选择好操作系统   推荐大家选择centos操作系统，该系统具有优良的稳定性，是许多开发者的不二之选，我选择的是centos8.1版本然后在系统的安全组设置好端口。 2.配置jdk环境   centos系统配置Java环境极其简单，只需要一串代码即可完成环境配置。 1sudo yum install java-11">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/xingchen-cmd/picture@master/halo%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91/%E8%A1%A8%E7%A4%BAjdk11%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.101h54f0ktxs.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/xingchen-cmd/picture@master/halo%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91/%E9%A1%B9%E7%9B%AE%E6%88%90%E5%8A%9F%E8%BF%90%E8%A1%8C.63z6hvf557s0.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/xingchen-cmd/picture@master/halo%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91/service%E6%9B%B4%E6%94%B9%E5%89%8D.6f50fmlq4io0.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/xingchen-cmd/picture@master/halo%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91/service%E4%BF%AE%E6%94%B9%E5%90%8E%E7%9A%84.45seaqwl67s0.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/xingchen-cmd/picture@master/halo%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91/%E9%87%8D%E6%96%B0%E5%8A%A0%E8%BD%BDsystemd%E8%BF%90%E8%A1%8C%E6%9C%8D%E5%8A%A1%EF%BC%8C%E5%9C%A8%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E6%97%B6%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1%EF%BC%8C%E6%9F%A5%E7%9C%8B%E6%97%A5%E5%BF%97.13ciotqq1skw.png">
+<meta property="article:published_time" content="2021-06-19T13:09:21.000Z">
+<meta property="article:modified_time" content="2021-06-19T13:14:14.902Z">
 <meta property="article:author" content="polly">
+<meta property="article:tag" content="HALO">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/xingchen-cmd/picture@master/halo%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91/%E8%A1%A8%E7%A4%BAjdk11%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.101h54f0ktxs.png">
   
   
     <link rel="icon" href="/images/tubiao.jpg">
@@ -191,129 +202,306 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-将halo部署到阿里云" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/04/OOP%E6%80%9D%E6%83%B3/" class="archive-article-date">
-  	<time datetime="2020-10-04T15:26:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-04</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/04/OOP%E6%80%9D%E6%83%B3/">OOP思想</a>
+    <h1 class="article-title" itemprop="name">
+      将halo部署到阿里云
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        <!--显示阅读次数-->
+
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
+
+<!--显示阅读次数完毕-->
+        
+        <a href="/2021/06/19/%E5%B0%86halo%E9%83%A8%E7%BD%B2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91/" class="archive-article-date">
+  	<time datetime="2021-06-19T13:09:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>使用的halo版本是1.4.8  centos版本8.1</p>
+</blockquote>
+<p>1.在阿里云服务器上面选择好操作系统<br>   推荐大家选择centos操作系统，该系统具有优良的稳定性，是许多开发者的不二之选，我选择的是centos8.1版本<br>然后在系统的安全组设置好端口。</p>
+<p>2.配置jdk环境<br>   centos系统配置Java环境极其简单，只需要一串代码即可完成环境配置。<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install java-11-openjdk &#x2F;&#x2F;安装jdk11</span><br></pre></td></tr></table></figure><br>  配置完成jdk后进行检查<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version  &#x2F;&#x2F; 查看jdk版本</span><br></pre></td></tr></table></figure><br> 如果显示如图则说明环境变量配置成功了<br><img src="https://cdn.jsdelivr.net/gh/xingchen-cmd/picture@master/halo%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91/%E8%A1%A8%E7%A4%BAjdk11%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.101h54f0ktxs.png"></p>
+<!--more--->
+<p>3.创建一个新的用户并将halo的jar安装在用户下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd -m halo   &#x2F;&#x2F; 创建新用户halo</span><br><span class="line">~~~~</span><br></pre></td></tr></table></figure>
+<p>usermod -aG wheel halo  //给halo用户授权</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~~~</span><br><span class="line">passwd halo  &#x2F;&#x2F; 给halo用户设置密码</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su - halo   &#x2F;&#x2F; 登录到halo用户</span><br></pre></td></tr></table></figure>
+<p>登录到halo用户之后再halo 用户下创建好app目录准备将halo.jar保存在目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir app &amp;&amp; cd app  &#x2F;&#x2F;创建并且进入app目录</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;dl.halo.run&#x2F;release&#x2F;halo-1.4.8.jar -O halo.jar &#x2F;&#x2F; 下载halo.jar</span><br></pre></td></tr></table></figure>
+<p>创建.halo文件保存halo的配置文件application.yaml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir .hexo &amp;&amp; cd .hexo  &#x2F;&#x2F;创建.hexo目录并进入</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;dl.halo.run&#x2F;config&#x2F;application-template.yaml -O .&#x2F;application.yaml   &#x2F;&#x2F;下载配置文件</span><br></pre></td></tr></table></figure>
+<p>下载好之后可以进入配置文件更改相对应的配置主要有端口号、数据库（没需求可以不用更改，作者没有更改）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim application.yaml   &#x2F;&#x2F;进入修改配置</span><br></pre></td></tr></table></figure>
+<p>改完之后返回到 app目录下运行halo.jar</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar halo.jar &#x2F;&#x2F;运行halo.jar</span><br></pre></td></tr></table></figure>
+<p>显示如下图就说明成功运行了<br><img src="https://cdn.jsdelivr.net/gh/xingchen-cmd/picture@master/halo%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91/%E9%A1%B9%E7%9B%AE%E6%88%90%E5%8A%9F%E8%BF%90%E8%A1%8C.63z6hvf557s0.png"></p>
+<p>4.返回root用户将该项目作为服务运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit  &#x2F;&#x2F;退出halo用户返回root用户</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;dl.halo.run&#x2F;config&#x2F;halo.service -O &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;halo.service  &#x2F;&#x2F;下载halo.service</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;halo.service  &#x2F;&#x2F;修改服务</span><br></pre></td></tr></table></figure>
+<p>主要修改的地方有两个一个是USER,将这个改为你的创建的用户名，如果没有创建新的用户名就把这一行删除，第二个地方是YOUR_JAT_PATH 把这个改成你下载halo.jar 的路径。</p>
+<blockquote>
+<p>修改前的：</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/xingchen-cmd/picture@master/halo%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91/service%E6%9B%B4%E6%94%B9%E5%89%8D.6f50fmlq4io0.png"></p>
+<blockquote>
+<p>修改后的：</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/xingchen-cmd/picture@master/halo%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91/service%E4%BF%AE%E6%94%B9%E5%90%8E%E7%9A%84.45seaqwl67s0.png"></p>
+<p>5.运行服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload  &#x2F;&#x2F;重新加载systemd</span><br><span class="line"></span><br><span class="line">systemctl start halo   &#x2F;&#x2F; 启动服务</span><br><span class="line"></span><br><span class="line">systemctl enable halo  &#x2F;&#x2F;在系统启动时启动服务</span><br><span class="line"></span><br><span class="line">journalctl -n 20 -u halo &#x2F;&#x2F;查看日志</span><br></pre></td></tr></table></figure>
+
+<p>日志如下图所示就说明启动成功了，如果依旧存在文件检查一下前面配置的application.yml与service文件配置。<br><img src="https://cdn.jsdelivr.net/gh/xingchen-cmd/picture@master/halo%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91/%E9%87%8D%E6%96%B0%E5%8A%A0%E8%BD%BDsystemd%E8%BF%90%E8%A1%8C%E6%9C%8D%E5%8A%A1%EF%BC%8C%E5%9C%A8%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E6%97%B6%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1%EF%BC%8C%E6%9F%A5%E7%9C%8B%E6%97%A5%E5%BF%97.13ciotqq1skw.png"></p>
+<p>上面的操作参考了<a target="_blank" rel="noopener" href="https://docs.halo.run/install/linux">在Linux环境下环境部署</a>有错误和不足之处欢迎指出并且在评论区留言。</p>
+
+      
+
+      <!-- 增加版权声明 -->
+
+
+
+<div class="declare" hidden="hidden"></div>
+
+
+<!-- 增加版权声明结束 -->
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/zhifubao1.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/weixin1.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JAVA</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HALO</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://xingchen-cmd.github.io/thub.io/2021/06/19/%E5%B0%86halo%E9%83%A8%E7%BD%B2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/03/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-10-03T15:21:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-03</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/12/03/Java%E9%9B%86%E5%90%88%E7%B1%BB%E6%A6%82%E8%BF%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java集合类概述</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/03/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">hexo博客的基本使用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HEXO</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/03/hello-world/" class="archive-article-date">
-  	<time datetime="2020-10-03T11:04:47.115Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/03/hello-world/">Hello World</a>
-    </h1>
+        
+    </div>
+</aside>
+
+
+
   
 
-        <div class="article-info info-on-right">
-          
-          
+ 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
+
   
+
+  
+
+  
+    <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '78d68fa26135f111d41a',
+  clientSecret: '6e0d4032cb41131ce8854f2ed96e4cf19da2cec3',
+  repo: 'blogtalk',
+  owner: 'xingchen-cmd',
+  admin: ['xingchen-cmd'],
+  id: md5(window.location.pathname),
+  distractionFreeMode: true
+})
+
+gitalk.render('gitalk-container')
+</script>
+
+
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "rcPbmDaLuwHvyUhBO9vsnK01-gzGzoHsz",
+            app_key: "yCVkh2AAAcrlDCNB4MvinKfp",
+            placeholder: "come on baby",
+            avatar:"mm"
+        });
+    }
+</script>
+</section>
+
 
     
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2020/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2020/">1</a><span class="page-number current">2</span>
-    </nav>
   
+
+
+
+
+
+
 
 
           </div>
@@ -339,8 +527,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

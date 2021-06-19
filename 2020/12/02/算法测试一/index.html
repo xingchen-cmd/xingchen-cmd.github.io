@@ -8,14 +8,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://xingchen-cmd.github.io">
-  <title>Archives: 2020 | polly&#39;s blog</title>
+  <title>算法测试一 | polly&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="polly&#39;s blog">
-<meta property="og:url" content="http://xingchen-cmd.github.io/archives/2020/page/2/index.html">
+  <meta name="description" content="1.题目一：实现 pow(x, n) ，即计算 x 的 n 次幂函数。示例 1: 12345678910111213141516输入: 2.00000, 10输出: 1024.00000示例 2:输入: 2.10000, 3输出: 9.26100示例 3:输入: 2.00000, -2输出: 0.25000解释: 2-2 &#x3D; 1&#x2F;22 &#x3D; 1&#x2F;4 &amp;#x3D">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法测试一">
+<meta property="og:url" content="http://xingchen-cmd.github.io/2020/12/02/%E7%AE%97%E6%B3%95%E6%B5%8B%E8%AF%95%E4%B8%80/index.html">
 <meta property="og:site_name" content="polly&#39;s blog">
+<meta property="og:description" content="1.题目一：实现 pow(x, n) ，即计算 x 的 n 次幂函数。示例 1: 12345678910111213141516输入: 2.00000, 10输出: 1024.00000示例 2:输入: 2.10000, 3输出: 9.26100示例 3:输入: 2.00000, -2输出: 0.25000解释: 2-2 &#x3D; 1&#x2F;22 &#x3D; 1&#x2F;4 &amp;#x3D">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-12-02T08:49:11.000Z">
+<meta property="article:modified_time" content="2020-12-02T17:32:25.454Z">
 <meta property="article:author" content="polly">
+<meta property="article:tag" content="Arithmetic">
 <meta name="twitter:card" content="summary">
   
   
@@ -191,129 +196,329 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-算法测试一" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/04/OOP%E6%80%9D%E6%83%B3/" class="archive-article-date">
-  	<time datetime="2020-10-04T15:26:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-04</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/04/OOP%E6%80%9D%E6%83%B3/">OOP思想</a>
+    <h1 class="article-title" itemprop="name">
+      算法测试一
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        <!--显示阅读次数-->
+
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
+
+<!--显示阅读次数完毕-->
+        
+        <a href="/2020/12/02/%E7%AE%97%E6%B3%95%E6%B5%8B%E8%AF%95%E4%B8%80/" class="archive-article-date">
+  	<time datetime="2020-12-02T08:49:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.题目一：实现 pow(x, n) ，即计算 x 的 n 次幂函数。<br>示例 1:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">输入: 2.00000, 10</span><br><span class="line">输出: 1024.00000</span><br><span class="line">示例 2:</span><br><span class="line"></span><br><span class="line">输入: 2.10000, 3</span><br><span class="line">输出: 9.26100</span><br><span class="line">示例 3:</span><br><span class="line"></span><br><span class="line">输入: 2.00000, -2</span><br><span class="line">输出: 0.25000</span><br><span class="line">解释: 2-2 &#x3D; 1&#x2F;22 &#x3D; 1&#x2F;4 &#x3D; 0.25</span><br><span class="line"></span><br><span class="line">说明:</span><br><span class="line"></span><br><span class="line">-100.0 &lt; x &lt; 100.0</span><br><span class="line">n 是 32 位有符号整数，其数值范围是 [−231, 231 − 1] 。</span><br></pre></td></tr></table></figure>
+
+<p>原题链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/powx-n">https://leetcode-cn.com/problems/powx-n</a></p>
+<p>如果利用常规方法用迭代或者递归来累乘的话那么会超时(用普通累乘递归时间复杂度为O(n),空间复杂度为O(n),用普通迭代时间复杂度为O(n),空间复杂度为O(1))，所以可以使用二分的方法<br>x^n=x^(n/2)*x(n/2)*x^(n%2);</p>
+<hr>
+<p>Java：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public double myPow(double x,int y)&#123;</span><br><span class="line">        if(y&#x3D;&#x3D;0)</span><br><span class="line">            return 1;</span><br><span class="line">        else if(y&#x3D;&#x3D;1)</span><br><span class="line">            return x;</span><br><span class="line">        else if(y&#x3D;&#x3D;-1)</span><br><span class="line">            return 1.0&#x2F;x;</span><br><span class="line">        else&#123;</span><br><span class="line">            double zj&#x3D;myPow(x,y&#x2F;2);</span><br><span class="line">            return zj*zj*myPow(x,y%2);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>还有一种方法他是利用了2进制的方法<br>将n-&gt;二进制数字，假设n为9,二进制数为1001那么x^9=x^8*x^1;可以利用二进制的思想来解决</p>
+<hr>
+<p>jva:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public double myPow(double x,int y)&#123;</span><br><span class="line">        double ans&#x3D;1;</span><br><span class="line">        long N&#x3D;y;&#x2F;&#x2F;因为Java的int范围是[-2147483648~2147483647]</span><br><span class="line">        while(N!&#x3D;0)&#123;</span><br><span class="line">            if((N%2)!&#x3D;0)&#123;</span><br><span class="line">                ans*&#x3D;x;</span><br><span class="line">            &#125;</span><br><span class="line">            x*&#x3D;x;</span><br><span class="line">            N&#x2F;&#x3D;2;</span><br><span class="line">        &#125;</span><br><span class="line">        return y&gt;0?ans:1.0&#x2F;ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>2.N皇后<br>n 皇后问题研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并且使皇后彼此之间不能相互攻击。<br>给定一个整数 n，返回所有不同的 n 皇后问题的解决方案。</p>
+<p>每一种解法包含一个明确的 n 皇后问题的棋子放置方案，该方案中 ‘Q’ 和 ‘.’ 分别代表了皇后和空位。</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">输入：4</span><br><span class="line">输出：[</span><br><span class="line"> [&quot;.Q..&quot;,  &#x2F;&#x2F; 解法 1</span><br><span class="line">  &quot;...Q&quot;,</span><br><span class="line">  &quot;Q...&quot;,</span><br><span class="line">  &quot;..Q.&quot;],</span><br><span class="line"></span><br><span class="line"> [&quot;..Q.&quot;,  &#x2F;&#x2F; 解法 2</span><br><span class="line">  &quot;Q...&quot;,</span><br><span class="line">  &quot;...Q&quot;,</span><br><span class="line">  &quot;.Q..&quot;]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>解释: 4 皇后问题存在两个不同的解法。
+ </p>
+<p>提示：</p>
+<p>皇后彼此不能相互攻击，也就是说：任何两个皇后都不能处于同一条横行、纵行或斜线上。</p>
+<p>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/n-queens">https://leetcode-cn.com/problems/n-queens</a></p>
+<p>N皇后是一个经典利用回溯来解决的一个问题，可以从第一行开始放棋子，进行判断棋子是否可以放置，可以的话继续往下走，直到n个棋子都放置完成了，且满足放置条件的就算成功，且保存放入集合内。<br>时间复杂度O(n!),空间复杂度O(n)</p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">class Solution&#123;</span><br><span class="line">    private List&lt;List&lt;String&gt;&gt; ans&#x3D;new LinkedList&lt;&gt;(); </span><br><span class="line">    private int N;</span><br><span class="line">    private char[][] array;</span><br><span class="line">    public List&lt;List&lt;String&gt;&gt; solveNQueens(int n)&#123;</span><br><span class="line">        N&#x3D;n;</span><br><span class="line">        array&#x3D;new char[N][N];</span><br><span class="line">        for(char[] a:array)&#123;</span><br><span class="line">            Arrays.fill(a,&#39;.&#39;);</span><br><span class="line">        &#125;</span><br><span class="line">        back(0);</span><br><span class="line">        return ans;</span><br><span class="line">    &#125;</span><br><span class="line">    public void back(int n)&#123;</span><br><span class="line">        if(n&#x3D;&#x3D;N)&#123;</span><br><span class="line">            List&lt;String&gt; sl&#x3D;new LinkedList&lt;&gt;();</span><br><span class="line">            for(char[] a:array)&#123;</span><br><span class="line">                sl.add(String.valueOf(a));</span><br><span class="line">            &#125;</span><br><span class="line">            ans.add(sl);</span><br><span class="line">        &#125;</span><br><span class="line">        for(int j&#x3D;0;j&lt;N;j++)&#123;</span><br><span class="line">            if(isVaild(n,j))&#123;</span><br><span class="line">                array[n][j]&#x3D;&#39;Q&#39;;</span><br><span class="line">                back(n+1);</span><br><span class="line">                array[n][j]&#x3D;&#39;.&#39;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public boolean isVaild(int x,int y)&#123;</span><br><span class="line">        for(int i&#x3D;0;i&lt;x;i++)&#123;</span><br><span class="line">            if(array[i][y]&#x3D;&#x3D;&#39;Q&#39;)</span><br><span class="line">                return false;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int j&#x3D;0;j&lt;y;j++)&#123;</span><br><span class="line">            if(array[x][j]&#x3D;&#x3D;&#39;Q&#39;)</span><br><span class="line">                return false;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i&#x3D;x-1,j&#x3D;y-1;i&gt;&#x3D;0&amp;&amp;j&gt;&#x3D;0;i--,j--)&#123;</span><br><span class="line">            if(array[i][j]&#x3D;&#x3D;&#39;Q&#39;)</span><br><span class="line">                return false;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i&#x3D;x-1,j&#x3D;y+1;i&gt;&#x3D;0&amp;&amp;j&lt;N;i--,j++)&#123;</span><br><span class="line">            if(array[i][j]&#x3D;&#x3D;&#39;Q&#39;)</span><br><span class="line">                return false;</span><br><span class="line">        &#125;</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>官方方法一：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">class Solution&#123;</span><br><span class="line">    public List&lt;List&lt;String&gt;&gt;solveNQueens(int n)&#123;</span><br><span class="line">        int N&#x3D;n;</span><br><span class="line">        int[] save&#x3D;new int[N];</span><br><span class="line">        Arrays.fill(save,-1);</span><br><span class="line">        Set&lt;Integer&gt; col&#x3D;new HashSet&lt;&gt;();</span><br><span class="line">        Set&lt;Integer&gt; xie1&#x3D;new HashSet&lt;&gt;();</span><br><span class="line">        Set&lt;Integer&gt; xie2&#x3D;new HashSet&lt;&gt;();</span><br><span class="line">        List&lt;List&lt;String&gt;&gt; ans&#x3D;new LinkedList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        back(ans,save,N,0,col,xie1,xie2);</span><br><span class="line">        return ans;</span><br><span class="line">    &#125;</span><br><span class="line">    public void back(List&lt;List&lt;String&gt;&gt; ans,int[] save,int N,int row,Set&lt;Integer&gt; col,Set&lt;Integer&gt; xie1,Set&lt;Integer&gt; xie2)&#123;</span><br><span class="line">        if(row&#x3D;&#x3D;N)&#123;</span><br><span class="line">            List&lt;String&gt; board&#x3D;haveans(save,N);</span><br><span class="line">            ans.add(board);</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i&#x3D;0;i&lt;N;i++)&#123;</span><br><span class="line">            if(col.contains(i))</span><br><span class="line">                continue;</span><br><span class="line">            int xieadd&#x3D;row+i;</span><br><span class="line">            if(xie1.contains(xieadd))</span><br><span class="line">                continue;</span><br><span class="line">            int xiejian&#x3D;row-i;</span><br><span class="line">            if(xie2.contains(xiejian))</span><br><span class="line">                continue;</span><br><span class="line">            save[row]&#x3D;i;</span><br><span class="line">            col.add(i);</span><br><span class="line">            xie1.add(xieadd);</span><br><span class="line">            xie2.add(xiejian);</span><br><span class="line">            back(ans,save,N,row+1,col,xie1,xie2);</span><br><span class="line">            save[row]&#x3D;-1;</span><br><span class="line">            col.remove(i);</span><br><span class="line">            xie1.remove(xieadd);</span><br><span class="line">            xie2.remove(xiejian);</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public List&lt;String&gt; haveans(int[] save,int N)&#123;</span><br><span class="line">        List&lt;String&gt; haveans&#x3D;new LinkedList&lt;&gt;();</span><br><span class="line">        for(int i&#x3D;0;i&lt;N;i++)&#123;</span><br><span class="line">            char[] col_zimu&#x3D;new char[N];</span><br><span class="line">            Arrays.fill(col_zimu,&#39;.&#39;);</span><br><span class="line">            col_zimu[save[i]]&#x3D;&#39;Q&#39;;</span><br><span class="line">            haveans.add(String.valueOf(col_zimu));</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        return haveans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>官方方法二：(利用了位运算)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public List&lt;List&lt;String&gt;&gt; solveNQueens(int n) &#123;</span><br><span class="line">        &#x2F;&#x2F; 这个数组用于记录每行中皇后所在的位置</span><br><span class="line">        int[] queens&#x3D;new int[n];</span><br><span class="line">        &#x2F;&#x2F; 官方在这里用-1填充queens数组，但是和下面的状态重置一样，没有必要</span><br><span class="line">        &#x2F;&#x2F; Arrays.fill(queens,-1);</span><br><span class="line">        List&lt;List&lt;String&gt;&gt; results&#x3D;new ArrayList&lt;&gt;();</span><br><span class="line">        solveNQueens(results,queens,n,0,0,0,0);</span><br><span class="line">        return results;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * int n：总行数</span><br><span class="line">    * int row：当前行数</span><br><span class="line">    * int columns：不可选的列</span><br><span class="line">    * int diagonals1：不可选的左斜边</span><br><span class="line">    * int diagonals2：不可选的右斜边</span><br><span class="line">    *&#x2F;</span><br><span class="line">    public void solveNQueens(List&lt;List&lt;String&gt;&gt; results,int[] queens,int n,int row,int columns,int diagonals1,int diagonals2)&#123;</span><br><span class="line">        &#x2F;&#x2F; 如果能到达这一步，说明搜索已经到底了，我们已经记录下了一个可行的方案</span><br><span class="line">        if(row&#x3D;&#x3D;n)&#123;</span><br><span class="line">            &#x2F;&#x2F; 直接生成一个结果，并放入结果集中</span><br><span class="line">            results.add(generateString(queens));</span><br><span class="line">            &#x2F;&#x2F; 方法终止</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F; 1&lt;&lt;n-1 是为了转化一个长度为n的，每位上都是1的二进制数，用于定位可以放置皇后的位置</span><br><span class="line">        &#x2F;&#x2F; 这里用于定位所有可选的位置，这里有一步取反，千万不要忽视了！</span><br><span class="line">        &#x2F;&#x2F; 上面我们用 1 表示不可选的位置，但是这里我们取反后，用1表示可选的位置</span><br><span class="line">        int availableLocations&#x3D;((1&lt;&lt;n)-1)&amp;(~(columns|diagonals1|diagonals2));</span><br><span class="line">        &#x2F;&#x2F; 我们通过下面的操作来保持之前所有的行对下一行的影响</span><br><span class="line">        &#x2F;&#x2F; 左斜边因为下降了一行需要左移一位</span><br><span class="line">        diagonals1&lt;&lt;&#x3D;1;</span><br><span class="line">        &#x2F;&#x2F; 右斜边因为下降了一行需要右移一位</span><br><span class="line">        diagonals2&gt;&gt;&#x3D;1;</span><br><span class="line">        &#x2F;&#x2F; 开始检查每个可选的位置</span><br><span class="line">        while(availableLocations!&#x3D;0)&#123;</span><br><span class="line">            &#x2F;&#x2F; 定位最后一个1的位置，这个操作可以自己手写验证一下（不要忘了把负数转成补码）</span><br><span class="line">            &#x2F;&#x2F; 这个定位的意思是，生成的这个二进制数只有最后一个1还为1，其他位都变成了0</span><br><span class="line">            int position&#x3D;availableLocations&amp;(-1*availableLocations);</span><br><span class="line">            &#x2F;&#x2F; 这个方法是统计一个二进制数中所有的“1”的个数</span><br><span class="line">            int columnNum&#x3D;Integer.bitCount(position-1);</span><br><span class="line">            &#x2F;&#x2F; 将这个位置添加到记录数组中</span><br><span class="line">            queens[row]&#x3D;columnNum;</span><br><span class="line">            &#x2F;&#x2F; 将这一位从可选取的位中移除</span><br><span class="line">            &#x2F;&#x2F; 减1把最后一个1拆成后面的多个1，再经过一次与操作把这些多出来的1全部清除 </span><br><span class="line">            availableLocations&#x3D;availableLocations&amp;(availableLocations-1);</span><br><span class="line">            &#x2F;&#x2F; 沿着这个位置向下搜索，可选行和可选列的直接在参数上变化即可，这样就不需要手动重置状态了</span><br><span class="line">            solveNQueens(results,queens,n,row+1,columns|position,diagonals1|position&lt;&lt;1,diagonals2|position&gt;&gt;1);</span><br><span class="line">            &#x2F;&#x2F; 官方在这里曾经重置过数组queens的状态，但实际上没这个必要，每次循环上一次的结果都会被覆盖</span><br><span class="line">            &#x2F;&#x2F; queens[row]&#x3D;-1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 生成字符串</span><br><span class="line">    public List&lt;String&gt; generateString(int[] queens)&#123;</span><br><span class="line">        List&lt;String&gt; result&#x3D;new ArrayList&lt;&gt;();</span><br><span class="line">        for(int i:queens)&#123;</span><br><span class="line">            char[] chars&#x3D;new char[queens.length];</span><br><span class="line">            Arrays.fill(chars,&#39;.&#39;);</span><br><span class="line">            chars[i]&#x3D;&#39;Q&#39;;</span><br><span class="line">            result.add(String.valueOf(chars));</span><br><span class="line">        &#125;</span><br><span class="line">        return result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.N皇后二：<br>n 皇后问题研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并且使皇后彼此之间不能相互攻击。<br>给定一个整数 n，返回 n 皇后不同的解决方案的数量。</p>
+<blockquote>
+<p>解题思路：和题目二一样利用回溯思想可以解决问题,相较于第二题少了对数组的保存</p>
+</blockquote>
+<p>方法一：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">class Solution&#123;</span><br><span class="line">    private int ans&#x3D;0;</span><br><span class="line">  public int totalNQueens(int n) &#123;</span><br><span class="line">      int N&#x3D;n;</span><br><span class="line">      char[][]array&#x3D;new char[N][N];</span><br><span class="line">     for(char[] line:array)</span><br><span class="line">        Arrays.fill(line,&#39;.&#39;);</span><br><span class="line">      back(N,0,array);</span><br><span class="line">      return ans;</span><br><span class="line">  &#125;</span><br><span class="line">  public void back(int n,int row,char[][] array)&#123;</span><br><span class="line">      if(row&#x3D;&#x3D;N)&#123;</span><br><span class="line">          ans++;</span><br><span class="line">          return;</span><br><span class="line">      &#125;</span><br><span class="line">      for(int i&#x3D;0;i&lt;&#x3D;N;i++)&#123;</span><br><span class="line">          if(isvalid(array,N,row,i))&#123;</span><br><span class="line">              array[row][i]&#x3D;&#39;Q&#39;;</span><br><span class="line">              back(N,row+1,array);</span><br><span class="line">              array[row][i]&#x3D;&#39;.&#39;;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  public boolean(char[][] array,int N,int row,int col)&#123;</span><br><span class="line">      for(int i&#x3D;row-1;i&gt;&#x3D;0;i--)&#123;</span><br><span class="line">          if(array[i][col]&#x3D;&#x3D;&#39;Q&#39;)</span><br><span class="line">            return false;</span><br><span class="line">      &#125;</span><br><span class="line">      for(int i&#x3D;row-1,j&#x3D;col-1;i&gt;&#x3D;0&amp;&amp;j&gt;&#x3D;0;i--,j--)&#123;</span><br><span class="line">          if(array[i][j]&#x3D;&#x3D;&#39;Q&#39;)</span><br><span class="line">            return false;</span><br><span class="line">      &#125;</span><br><span class="line">      for(int i&#x3D;row-1,j&#x3D;col+1;i&gt;&#x3D;0&amp;&amp;j&lt;N;i--,j++&gt;)</span><br><span class="line">      &#123;</span><br><span class="line">          if(array[i][j]&#x3D;&#x3D;&#39;Q&#39;)&#123;</span><br><span class="line">              return false;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      return true;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>方法二：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">class Solution&#123;</span><br><span class="line">    int ans&#x3D;0;</span><br><span class="line">    public int totalNQueens(int n)&#123;</span><br><span class="line">        int N&#x3D;n;</span><br><span class="line">        Set&lt;Integer&gt; col&#x3D;new HashSet&lt;&gt;();</span><br><span class="line">        Set&lt;Integer&gt; xie1&#x3D;new HashSet&lt;&gt;();</span><br><span class="line">        Set&lt;Integer&gt; xie2&#x3D;new HashSet&lt;&gt;();</span><br><span class="line">        back(N,0,col,xie1,xie2);</span><br><span class="line">        return ans;</span><br><span class="line">    &#125;</span><br><span class="line">    public void back(int N,int row Set&lt;Integer&gt; col,Set&lt;Integer&gt; xie1,Set&lt;Integer&gt;xie2)&#123;</span><br><span class="line">        if(row&#x3D;&#x3D;N)&#123;</span><br><span class="line">            ans++;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i&#x3D;0;i&lt;N;i++)&#123;</span><br><span class="line">            if(col.contains(i))</span><br><span class="line">                continue;</span><br><span class="line">            int xieadd&#x3D;row+i;</span><br><span class="line">            if(xie1.contains(xieadd))&#123;</span><br><span class="line">                continue;</span><br><span class="line">            &#125;</span><br><span class="line">            int xiejian&#x3D;row-i;</span><br><span class="line">            if(xie2.contains(xiejian))&#123;</span><br><span class="line">                continue;</span><br><span class="line">            &#125;</span><br><span class="line">            col.add(i);</span><br><span class="line">            xie1.add(xieadd);</span><br><span class="line">            xie2.add(xiejian);</span><br><span class="line">            back(N,row+1,col,xie1,xie2);</span><br><span class="line">            col.remove(i);</span><br><span class="line">            xie1.remove(xieadd);</span><br><span class="line">            xie2.remove(xiejian);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>时间复杂度O(n!)<br>空间复杂度O(n)<br>4.螺旋矩阵：给定一个包含 m x n 个元素的矩阵（m 行, n 列），请按照顺时针螺旋顺序，返回矩阵中的所有元素。</p>
+<p>示例 1:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">[</span><br><span class="line"> [ 1, 2, 3 ],</span><br><span class="line"> [ 4, 5, 6 ],</span><br><span class="line"> [ 7, 8, 9 ]</span><br><span class="line">]</span><br><span class="line">输出: [1,2,3,6,9,8,7,4,5]</span><br><span class="line">示例 2:</span><br><span class="line"></span><br><span class="line">输入:</span><br><span class="line">[</span><br><span class="line">  [1, 2, 3, 4],</span><br><span class="line">  [5, 6, 7, 8],</span><br><span class="line">  [9,10,11,12]</span><br><span class="line">]</span><br><span class="line">输出: [1,2,3,4,8,12,11,10,9,5,6,7]</span><br></pre></td></tr></table></figure>
+<p>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/spiral-matrix">https://leetcode-cn.com/problems/spiral-matrix</a></p>
+<p>思路：通过模拟的方法来模拟出顺时针读取数据的方式发现了规律我们设置四个点rowhard[行的起点]=0,colhard[列的起点]=0，rowend[行的终点]=row.length-1,colend[列的终点]=col.length-1,从(rowhard,colhard)开始，先扫描第一行的数组里面的值，并读取并保存到list里面扫描到了终点之后,行的起点就+1,从新的起点(rowhard,colend)开始扫描列，扫描完了之后列的终点-1，然后从新的起点开始(rowend,colend),又开始行的扫描,扫描完之后行的终点-1，从新的起点(rowend,colhard)开始扫描,这四个步骤组成了一个循环，如果终极出现了起点大于终点那么说明数组的所有数据都已经扫描完毕了，那么应该结束循环。最后将数据集合返回。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">class Solution&#123;</span><br><span class="line">    public List&lt;Integer&gt; spiralOrder(int[][] matrix) &#123;</span><br><span class="line">        List&lt;Integer&gt;list&#x3D;new List&lt;&gt;();</span><br><span class="line">        int rowend&#x3D;matrix.length-1;</span><br><span class="line">        int colend&#x3D;matrix[i].length-1;</span><br><span class="line">        int rowhard&#x3D;0,colhard&#x3D;0;</span><br><span class="line">        while(true)&#123;</span><br><span class="line">            for(int j&#x3D;colhard;j&lt;&#x3D;colend;j++)&#123;</span><br><span class="line">                list.add(matrix[rowhard][j]);</span><br><span class="line">            &#125;</span><br><span class="line">            rowhard++;</span><br><span class="line">            if(rowhard&gt;rowend)break;</span><br><span class="line">            for(int i&#x3D;rowhard;i&lt;&#x3D;rowend;i++)&#123;</span><br><span class="line">                list.add(matrix[i][colend]);</span><br><span class="line">            &#125;</span><br><span class="line">            colend--;</span><br><span class="line">            if(colhard&gt;colend)break;</span><br><span class="line">            for(int j&#x3D;colend;j&gt;&#x3D;colhard;j--)&#123;</span><br><span class="line">                list.add(matrix[colend][j]);</span><br><span class="line">            &#125;</span><br><span class="line">            rowend--;</span><br><span class="line">            if(rowhard&gt;rowend)break;</span><br><span class="line">            for(int i&#x3D;rowend;i&gt;&#x3D;rowhaerd;i--)&#123;</span><br><span class="line">                list.add(matrix[i][colhard]);</span><br><span class="line">            &#125;</span><br><span class="line">            colhard++;</span><br><span class="line">              if(colhard&gt;colend)break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>时间复杂度O(n^2);<br>空间复杂度O(1);</p>
+<p>5.螺旋矩阵2：给定一个正整数 n，生成一个包含 1 到 n^2 所有元素，且元素按顺时针顺序螺旋排列的正方形矩阵。</p>
+<p>示例:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入: 3</span><br><span class="line">输出:</span><br><span class="line">[</span><br><span class="line"> [ 1, 2, 3 ],</span><br><span class="line"> [ 8, 9, 4 ],</span><br><span class="line"> [ 7, 6, 5 ]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/spiral-matrix-ii">https://leetcode-cn.com/problems/spiral-matrix-ii</a></p>
+<p>思路：题五和题四一样运用模拟的思路可以解析，不过与四不同的是这个是一个正方形矩阵，相对而言更加特殊(不需要去判断是否起点&gt;大于中点，因为是正方矩形只要一边起点大于终点，另一边马上也会，他就不会继续给数组赋值，如果是长方形矩阵那么需要添加判断)，可以直接模拟顺时针得到数组的row，col将依次递增的数填入数组，最后返回数组。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class Solution&#123;</span><br><span class="line">    public int[][] generateMatrix(int n)&#123;</span><br><span class="line">         int[][] ans&#x3D;new int[n][n];</span><br><span class="line">         int count&#x3D;1;</span><br><span class="line">         int countmax&#x3D;n*n;</span><br><span class="line">         int rowhard&#x3D;0,rowend&#x3D;n-1;</span><br><span class="line">         int colhard&#x3D;0,colend&#x3D;n-1;</span><br><span class="line">         while(count&lt;&#x3D;countmax)&#123;</span><br><span class="line">            for(int j&#x3D;colhard;j&lt;&#x3D;colend;j++)</span><br><span class="line">                ans[rowhard][j]&#x3D;count++;</span><br><span class="line">            rowhard++;</span><br><span class="line">            for(int i&#x3D;rowhard;i&lt;&#x3D;rowend;i++)</span><br><span class="line">                ans[i][colend]&#x3D;count++;</span><br><span class="line">            colend--;</span><br><span class="line">            for(int j&#x3D;colend;j&gt;&#x3D;colhard;j--)</span><br><span class="line">                ans[rowend][j]&#x3D;count++;</span><br><span class="line">            rowend--;</span><br><span class="line">            for(int i&#x3D;rowend;i&gt;&#x3D;rowhard;i--)</span><br><span class="line">                ans[i][colhard]&#x3D;count++;</span><br><span class="line">            colhard++;</span><br><span class="line">         &#125;</span><br><span class="line">         return ans;   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>时间复杂度O(n^2)<br>空间复杂度O(1)</p>
+<blockquote>
+<p>总结：这五道题目所涉及的算法有分治、回溯、模拟、位运算，四大点，尤其是回溯与分治的思想在很多地方都用的着，这很有利于减少代码运行的时间复杂度。</p>
+</blockquote>
+
+      
+
+      <!-- 增加版权声明 -->
+
+
+
+<div class="declare" hidden="hidden"></div>
+
+
+<!-- 增加版权声明结束 -->
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/zhifubao1.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/weixin1.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JAVA</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Arithmetic</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://xingchen-cmd.github.io/thub.io/2020/12/02/%E7%AE%97%E6%B3%95%E6%B5%8B%E8%AF%95%E4%B8%80/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/03/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-10-03T15:21:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-03</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/12/03/Java%E9%9B%86%E5%90%88%E7%B1%BB%E6%A6%82%E8%BF%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Java集合类概述
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/11/27/java%E5%AE%9E%E6%88%98-%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%E4%B8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java实战-俄罗斯方块下</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/03/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">hexo博客的基本使用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HEXO</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/03/hello-world/" class="archive-article-date">
-  	<time datetime="2020-10-03T11:04:47.115Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/03/hello-world/">Hello World</a>
-    </h1>
+        
+    </div>
+</aside>
+
+
+
   
 
-        <div class="article-info info-on-right">
-          
-          
+ 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
+
   
+
+  
+
+  
+    <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '78d68fa26135f111d41a',
+  clientSecret: '6e0d4032cb41131ce8854f2ed96e4cf19da2cec3',
+  repo: 'blogtalk',
+  owner: 'xingchen-cmd',
+  admin: ['xingchen-cmd'],
+  id: md5(window.location.pathname),
+  distractionFreeMode: true
+})
+
+gitalk.render('gitalk-container')
+</script>
+
+
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "rcPbmDaLuwHvyUhBO9vsnK01-gzGzoHsz",
+            app_key: "yCVkh2AAAcrlDCNB4MvinKfp",
+            placeholder: "come on baby",
+            avatar:"mm"
+        });
+    }
+</script>
+</section>
+
 
     
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2020/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2020/">1</a><span class="page-number current">2</span>
-    </nav>
   
+
+
+
+
+
+
 
 
           </div>
@@ -339,8 +544,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
